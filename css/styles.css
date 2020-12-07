@@ -1,0 +1,85 @@
+:root{
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+h1{
+  color: white;
+}
+
+.parent{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr .8fr;
+  grid-gap: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  grid-template-areas:
+  "navbar navbar navbar navbar"
+  ". main main main"
+  "content1 content2 content3 content4"
+  "footer footer footer footer"
+
+}
+.navbar{
+  background: blue;
+  grid-area: navbar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+
+}
+.main{
+  background: red;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.content1{
+  background: purple;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.content2{
+background-color: skyblue;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.content3{
+background-color:pink;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+.content4{
+  background-color: green;
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+.footer{
+  background-color: gray;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+@media (max-width: 600px){
+  .parent{
+  grid-template-columns: 1fr;
+  grid-template-rows: .4 2.5fr 2fr 1.8fr 1.5fr 1.2fr 1fr;
+  grid-template-areas:
+  "navbar"
+  "main"
+  "content1"
+  "content2"
+  "content3"
+  "content4"
+  "footer";
+  }
+}
